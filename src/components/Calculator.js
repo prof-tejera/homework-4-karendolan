@@ -23,19 +23,19 @@ class Calculator extends Component {
   handleDotClick = (dot) => {
     if (!this.state.operator) {
       console.log(this.state.first);
-      if (this.state.first && (this.state.first).contains(dot)) return;
+      if (this.state.first && this.state.first % 1 !== 0) return;
       this.setState({ first: `${this.state.first || ""}${dot}` });
     } else {
       console.log(this.state.second);
-      if (this.state.second && (this.state.second).contains(dot)) return;
+      if (this.state.second && this.state.second % 1 !== 0) return;
       this.setState({ second: `${this.state.second || ""}${dot}` });
     }
   };
 
   handleOperatorClick = (operator) => {
     if (operator === "=") {
-      const first = Number(this.state.first);
-      const second = Number(this.state.second);
+      const first = parseFloat(this.state.first);
+      const second = parseFloat(this.state.second);
 
       if (this.state.operator === "+") {
         this.setState({ operator: null, first: first + second, second: null });
