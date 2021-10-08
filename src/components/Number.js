@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   padding: 10px;
@@ -27,6 +28,10 @@ class Number extends Component {
   }
 }
 
-
+// Defined prop types
+Number.propTypes = {
+  value: PropTypes.number,
+  onClick: PropTypes.func,
+}
 
 export default Number;

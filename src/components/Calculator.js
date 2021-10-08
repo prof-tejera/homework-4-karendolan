@@ -4,20 +4,6 @@ import Number from "./Number";
 import Operator from "./Operator";
 import Screen from "./Screen";
 
-//flex-wrap:
-const Styles = {
-  header: {
-    justifyContent: 'center',
-    display: 'flex',
-    color: 'green',
-    fontWeight: 'bold',
-    fontFamily: 'Courier New',
-  },
-  b: {
-    cursor: 'pointer',
-  }
-};
-
 class Calculator extends Component {
   state = {
     first: null,
@@ -33,10 +19,23 @@ class Calculator extends Component {
     }
   };
 
+  // Special case when make the number a decimal
+  handleDotClick = (dot) => {
+    if (!this.state.operator) {
+      console.log(this.state.first);
+      if (this.state.first && (this.state.first).contains(dot)) return;
+      this.setState({ first: `${this.state.first || ""}${dot}` });
+    } else {
+      console.log(this.state.second);
+      if (this.state.second && (this.state.second).contains(dot)) return;
+      this.setState({ second: `${this.state.second || ""}${dot}` });
+    }
+  };
+
   handleOperatorClick = (operator) => {
     if (operator === "=") {
-      const first = parseInt(this.state.first);
-      const second = parseInt(this.state.second);
+      const first = Number(this.state.first);
+      const second = Number(this.state.second);
 
       if (this.state.operator === "+") {
         this.setState({ operator: null, first: first + second, second: null });
@@ -72,7 +71,7 @@ class Calculator extends Component {
            width: "250px",
           }}>
             <Number value={0} onClick={this.handleNumberClick} />
-            <Operator value="." onClick={this.handleOperatorClick} />
+            <Operator value="." onClick={this.handleDotClick} />
             <Operator value="=" onClick={this.handleOperatorClick} />
             <Number value={1} onClick={this.handleNumberClick} />
             <Number value={2} onClick={this.handleNumberClick} />

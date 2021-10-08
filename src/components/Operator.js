@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Container = styled.div`
   padding: 10px;
@@ -15,6 +16,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   fontFamily: 'Courier New',
+  fontSize: 'bold',
 `;
 
 class Operator extends Component {
@@ -25,6 +27,12 @@ class Operator extends Component {
       </Container>
     );
   }
+}
+
+// Defined prop types
+Operator.propTypes = {
+  value: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 export default Operator;
