@@ -11,6 +11,10 @@ const Container = styled.div`
   padding: 5px;
   margin: 15px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fontFamily: 'Courier New',
 `;
 
 class Number extends Component {
