@@ -7,6 +7,10 @@ const Container = styled.div`
   height: 70px;
   text-align: right;
   margin-bottom: 10px;
+  background-color: grey;
+  padding: 5px;
+  margin: 15px;
+  border-radius: 10px;
 `;
 
 class Screen extends Component {

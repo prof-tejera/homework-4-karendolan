@@ -4,6 +4,20 @@ import Number from "./Number";
 import Operator from "./Operator";
 import Screen from "./Screen";
 
+//flex-wrap:
+const Styles = {
+  header: {
+    justifyContent: 'center',
+    display: 'flex',
+    color: 'green',
+    fontWeight: 'bold',
+    fontFamily: 'Courier New',
+  },
+  b: {
+    cursor: 'pointer',
+  }
+};
+
 class Calculator extends Component {
   state = {
     first: null,
@@ -46,9 +60,20 @@ class Calculator extends Component {
     return (
       <>
         <Screen value={this.getScreenValue()} />
-        <div style={{ display: "flex" }}>
-          <div>
+        <Operator value="clear" onClick={this.handleOperatorClick} />
+        <div style={{
+          display: "flex",
+          flexWrap: "wrap-reverse",
+         }}>
+         <div style={{
+           display: "flex",
+           flexWrap: "wrap-reverse",
+           alignContent: "flex-end",
+           width: "250px",
+          }}>
             <Number value={0} onClick={this.handleNumberClick} />
+            <Operator value="." onClick={this.handleOperatorClick} />
+            <Operator value="=" onClick={this.handleOperatorClick} />
             <Number value={1} onClick={this.handleNumberClick} />
             <Number value={2} onClick={this.handleNumberClick} />
             <Number value={3} onClick={this.handleNumberClick} />
@@ -59,13 +84,17 @@ class Calculator extends Component {
             <Number value={8} onClick={this.handleNumberClick} />
             <Number value={9} onClick={this.handleNumberClick} />
           </div>
-          <div style={{ paddingLeft: 10 }}>
-            <Operator value="+" onClick={this.handleOperatorClick} />
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            flexWrap: "wrap",
+            alignContent: "flex",
+            width: "50px",
+           }}>
             <Operator value="/" onClick={this.handleOperatorClick} />
             <Operator value="x" onClick={this.handleOperatorClick} />
             <Operator value="-" onClick={this.handleOperatorClick} />
-            <Operator value="=" onClick={this.handleOperatorClick} />
-            <Operator value="clear" onClick={this.handleOperatorClick} />
+            <Operator value="+" onClick={this.handleOperatorClick} />
           </div>
         </div>
       </>
