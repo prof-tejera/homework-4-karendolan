@@ -21,8 +21,8 @@ function App() {
   return (
     <div className="App" style={Styles.app}>
       <div style={{
-        width: '70%',
-        height: '90%',
+        width: '350px',
+        height: '500px',
         backgroundColor: 'black',
         borderRadius: '25px',
         padding: '20px',
