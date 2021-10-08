@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.f07be738.chunk.css",
-    "main.js": "/static/js/main.faace133.chunk.js",
-    "main.js.map": "/static/js/main.faace133.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.54c00196.js",
-    "runtime-main.js.map": "/static/js/runtime-main.54c00196.js.map",
-    "static/js/2.d72b115a.chunk.js": "/static/js/2.d72b115a.chunk.js",
-    "static/js/2.d72b115a.chunk.js.map": "/static/js/2.d72b115a.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.f07be738.chunk.css.map": "/static/css/main.f07be738.chunk.css.map",
-    "static/js/2.d72b115a.chunk.js.LICENSE.txt": "/static/js/2.d72b115a.chunk.js.LICENSE.txt"
+    "main.css": "/homework-4-karendolan/static/css/main.f07be738.chunk.css",
+    "main.js": "/homework-4-karendolan/static/js/main.faace133.chunk.js",
+    "main.js.map": "/homework-4-karendolan/static/js/main.faace133.chunk.js.map",
+    "runtime-main.js": "/homework-4-karendolan/static/js/runtime-main.9688b3ac.js",
+    "runtime-main.js.map": "/homework-4-karendolan/static/js/runtime-main.9688b3ac.js.map",
+    "static/js/2.c4fbe4ad.chunk.js": "/homework-4-karendolan/static/js/2.c4fbe4ad.chunk.js",
+    "static/js/2.c4fbe4ad.chunk.js.map": "/homework-4-karendolan/static/js/2.c4fbe4ad.chunk.js.map",
+    "index.html": "/homework-4-karendolan/index.html",
+    "static/css/main.f07be738.chunk.css.map": "/homework-4-karendolan/static/css/main.f07be738.chunk.css.map",
+    "static/js/2.c4fbe4ad.chunk.js.LICENSE.txt": "/homework-4-karendolan/static/js/2.c4fbe4ad.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.54c00196.js",
-    "static/js/2.d72b115a.chunk.js",
+    "static/js/runtime-main.9688b3ac.js",
+    "static/js/2.c4fbe4ad.chunk.js",
     "static/css/main.f07be738.chunk.css",
     "static/js/main.faace133.chunk.js"
   ]
